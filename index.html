@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>API</title>  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" type="text/css">
+  <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+  
+  <header>
+    <div class="progress-container">
+      <progress id="loading" max="100" value="20"></progress>                <!-- лекция 3  - делаем полосу загрузки(сначала запускаем сервер в терминале -> node server.js, потом в браузере localhost:3000) -->
+                                                                             <!-- лекция 3  - атрибут max - максимальное значение, value - текущее значение -->
+    </div>
+    <nav>
+      <ul>
+        <li><a href="home" data-name = "home">Home</a></li>         <!-- data-name - пользовательский атрибут(начинается с data) для роутинга-->
+        <li><a href="about" data-name = "about">About</a></li>
+        <li><a href="contact" data-name = "contact">Contact</a></li>
+        <li><a href="profile" data-name="profile">Profile</a></li>
+      </ul>
+    </nav>
+    
+    <input type="search">  <!-- строка поиска, ЛЕКЦИЯ 3 -->
+    
+
+  </header>
+  <main>
+
+    <section id="home-page" class="hidden">
+      <h1>Home</h1>
+    </section>
+
+    <section id="about-page" class="hidden">
+      <h1>About</h1>
+    </section>
+
+    <section id="contact-page" class="hidden">
+      <h1>Contact</h1>
+    </section>
+
+    <section id="profile-page" class="hidden">
+      <h1>Profile</h1>
+      <form>
+        <img id="preview" src="" alt="User avatar">
+        <input id="avatar" type="file" accept="image/*" multiple>    <!-- type="file" - для выбора файлов(откроется диалоговое окно), accept - фильтр(звездочка значит, что все изображения) -->
+                                                                      <!-- после accept= можно писать - .txt(расширение), .mp3, text/plain (mime-тип),  -->
+                                                                       <!--multiple - множественный выбор (через shift)-->
+      </form> 
+    </section>
+
+  </main>
+
+  <div id="mouse-area" class="hover"></div>
+
+  <textarea id="clipboardArea">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, soluta.
+     Ullam perferendis accusantium non neque quibusdam, cum suscipit repellendus, omnis id corporis 
+     unde consectetur voluptas sequi odit illum. Tempore, aperiam.
+  </textarea>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
